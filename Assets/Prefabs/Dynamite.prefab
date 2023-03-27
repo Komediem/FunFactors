@@ -78,5 +78,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionSpeed: 3
   radius: 25
-  power: 10
-  explosionVFX: {fileID: 1879536482433293116, guid: 663cb9ba1abc17c46a1c129769e75c0d, type: 3}
+  power: 1000
+  explosionVFX: {fileID: 100002, guid: f7efb0d9df2264096af57128df85dddb, type: 3}

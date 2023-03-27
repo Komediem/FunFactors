@@ -28,7 +28,7 @@ public class Dynamite : MonoBehaviour
     public void Explosion()
     {
         GameObject explosion = Instantiate(explosionVFX, transform.position, transform.rotation);
-        //Destroy(explosion, 3);
+        Destroy(explosion, 1);
         knockBack();
         Destroy(gameObject);
 
@@ -37,7 +37,8 @@ public class Dynamite : MonoBehaviour
 
     void knockBack()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+        Vector3 ExplosionPos = transform.position;
+        Collider[] colliders = Physics.OverlapSphere(ExplosionPos, radius);
 
         foreach (Collider hit in colliders)
         {
@@ -45,7 +46,7 @@ public class Dynamite : MonoBehaviour
 
             if (rb != null)
             {
-                rb.AddExplosionForce(power, transform.position, radius);
+                rb.AddExplosionForce(power, ExplosionPos, radius, 3.0f);
             }
         }
     }
