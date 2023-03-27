@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 8c4b09da82b1fd048993c5e1565fcd0e, type: 3}
       propertyPath: m_Name
-      value: Dynamite_2 Variant
+      value: Dynamite
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8c4b09da82b1fd048993c5e1565fcd0e, type: 3}
       propertyPath: m_RootOrder
@@ -59,3 +59,24 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c4b09da82b1fd048993c5e1565fcd0e, type: 3}
+--- !u!1 &7711958526283396728 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 8c4b09da82b1fd048993c5e1565fcd0e, type: 3}
+  m_PrefabInstance: {fileID: 7711958526283428056}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-531783016730068918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7711958526283396728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6112bd620949d7949bf30161792e28c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionSpeed: 3
+  radius: 25
+  power: 10
+  explosionVFX: {fileID: 1879536482433293116, guid: 663cb9ba1abc17c46a1c129769e75c0d, type: 3}
