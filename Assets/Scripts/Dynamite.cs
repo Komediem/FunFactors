@@ -15,6 +15,8 @@ public class Dynamite : MonoBehaviour
 
     [SerializeField]
     private GameObject explosionVFX;
+    [SerializeField]
+    private GameObject SplashVFX;
 
 
     private FishCounter fishCounter;
@@ -41,6 +43,7 @@ public class Dynamite : MonoBehaviour
         if(other.CompareTag("water"))
         {
             FindObjectOfType<AudioManager>().Play("Splash");
+            Instantiate(SplashVFX, transform.position, transform.rotation);
         }
     }
 
