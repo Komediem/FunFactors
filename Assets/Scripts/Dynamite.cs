@@ -10,13 +10,22 @@ public class Dynamite : MonoBehaviour
     private float radius;
     [SerializeField]
     private float power;
+    [SerializeField]
+    private float rotateSpeed;
 
     [SerializeField]
     private GameObject explosionVFX;
 
+    private FishScript fishScript;
+
     void Start()
     {
         StartCoroutine(DynamiteTimer());
+    }
+
+    private void Update()
+    {
+        transform.Rotate(0, 0, rotateSpeed * Time.deltaTime);
     }
 
     IEnumerator DynamiteTimer()
@@ -43,6 +52,7 @@ public class Dynamite : MonoBehaviour
         foreach (Collider hit in colliders)
         {
             Rigidbody rb = hit.GetComponent<Rigidbody>();
+            fishScript.speed = 0;
 
             if (rb != null)
             {

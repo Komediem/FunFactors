@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3142836337307155440, guid: 8c4b09da82b1fd048993c5e1565fcd0e, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142836337307155440, guid: 8c4b09da82b1fd048993c5e1565fcd0e, type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7236111200410690086, guid: 8c4b09da82b1fd048993c5e1565fcd0e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -108,4 +116,5 @@ MonoBehaviour:
   explosionSpeed: 3
   radius: 25
   power: 1000
+  rotateSpeed: 600
   explosionVFX: {fileID: 100002, guid: f7efb0d9df2264096af57128df85dddb, type: 3}
