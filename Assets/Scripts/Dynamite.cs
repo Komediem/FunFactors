@@ -17,10 +17,11 @@ public class Dynamite : MonoBehaviour
     private GameObject explosionVFX;
 
 
-    private FishScript fishScript;
+    private FishCounter fishCounter;
 
     void Start()
     {
+        fishCounter = FindObjectOfType<FishCounter>();
         StartCoroutine(DynamiteTimer());
     }
 
@@ -47,6 +48,7 @@ public class Dynamite : MonoBehaviour
     {
         GameObject explosion = Instantiate(explosionVFX, transform.position, transform.rotation);
         Destroy(explosion, 1);
+        //scoreCount();
         knockBack();
         FindObjectOfType<AudioManager>().Play("Explosion");
         Destroy(gameObject);
@@ -64,7 +66,22 @@ public class Dynamite : MonoBehaviour
             if (rb != null)
             {
                 rb.AddExplosionForce(power, ExplosionPos, radius, 3.0f);
+                fishCounter.fishCount++;
             }
         }
     }
+
+    /*void scoreCount()
+    {
+        Vector3 ExplosionPos = transform.position;
+        Collider[] colliders = Physics.OverlapSphere(ExplosionPos, radius);
+
+        foreach (Collider hit in colliders)
+        {
+            if(hit.CompareTag("fish"))
+            {
+                
+            }
+        }
+    }*/
 }

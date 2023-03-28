@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2206852426022253465, guid: de500f6b90f89bc4c87a6585b2dea01a, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: fish
       objectReference: {fileID: 0}
     - target: {fileID: 2698599783777480253, guid: de500f6b90f89bc4c87a6585b2dea01a, type: 3}
       propertyPath: m_Convex
