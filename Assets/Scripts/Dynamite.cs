@@ -43,7 +43,7 @@ public class Dynamite : MonoBehaviour
         if(other.CompareTag("water"))
         {
             FindObjectOfType<AudioManager>().Play("Splash");
-            Instantiate(SplashVFX, transform.position, transform.rotation);
+            Instantiate(SplashVFX, transform.position, Quaternion.identity);
         }
     }
 
@@ -51,7 +51,6 @@ public class Dynamite : MonoBehaviour
     {
         GameObject explosion = Instantiate(explosionVFX, transform.position, transform.rotation);
         Destroy(explosion, 1);
-        //scoreCount();
         knockBack();
         FindObjectOfType<AudioManager>().Play("Explosion");
         Destroy(gameObject);
@@ -73,18 +72,4 @@ public class Dynamite : MonoBehaviour
             }
         }
     }
-
-    /*void scoreCount()
-    {
-        Vector3 ExplosionPos = transform.position;
-        Collider[] colliders = Physics.OverlapSphere(ExplosionPos, radius);
-
-        foreach (Collider hit in colliders)
-        {
-            if(hit.CompareTag("fish"))
-            {
-                
-            }
-        }
-    }*/
 }

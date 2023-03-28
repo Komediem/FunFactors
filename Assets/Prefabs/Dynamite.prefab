@@ -138,4 +138,4 @@ MonoBehaviour:
   power: 1000
   rotateSpeed: 600
   explosionVFX: {fileID: 100002, guid: f7efb0d9df2264096af57128df85dddb, type: 3}
-  SplashVFX: {fileID: 7824033616652428577, guid: d092d6a5613493b48bbc523663c1477c, type: 3}
+  SplashVFX: {fileID: 7673454545943052047, guid: 0cfe2a39d11a0aa41a1f9aa3920a8607, type: 3}
