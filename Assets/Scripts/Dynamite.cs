@@ -16,6 +16,7 @@ public class Dynamite : MonoBehaviour
     [SerializeField]
     private GameObject explosionVFX;
 
+
     private FishScript fishScript;
 
     void Start()
@@ -34,14 +35,21 @@ public class Dynamite : MonoBehaviour
         Explosion();
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("water"))
+        {
+            FindObjectOfType<AudioManager>().Play("Splash");
+        }
+    }
+
     public void Explosion()
     {
         GameObject explosion = Instantiate(explosionVFX, transform.position, transform.rotation);
         Destroy(explosion, 1);
         knockBack();
+        FindObjectOfType<AudioManager>().Play("Explosion");
         Destroy(gameObject);
-
-        
     }
 
     void knockBack()
@@ -52,7 +60,6 @@ public class Dynamite : MonoBehaviour
         foreach (Collider hit in colliders)
         {
             Rigidbody rb = hit.GetComponent<Rigidbody>();
-            fishScript.speed = 0;
 
             if (rb != null)
             {
