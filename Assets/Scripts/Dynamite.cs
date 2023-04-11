@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 
 public class Dynamite : MonoBehaviour
@@ -18,13 +20,13 @@ public class Dynamite : MonoBehaviour
     [SerializeField]
     private GameObject SplashVFX;
 
-    private FishScript fishScript;
     private FishCounter fishCounter;
+    private FishScript fishScript;
 
     void Start()
     {
-        fishCounter = FindObjectOfType<FishCounter>();
         fishScript = FindObjectOfType<FishScript>();
+        fishCounter = FindObjectOfType<FishCounter>();
         StartCoroutine(DynamiteTimer());
     }
 
@@ -69,8 +71,8 @@ public class Dynamite : MonoBehaviour
             if (rb != null)
             {
                 fishScript.IsExplosed++;
-                rb.AddExplosionForce(power, ExplosionPos, radius, 3.0f);
                 fishCounter.fishCount++;
+                rb.AddExplosionForce(power, ExplosionPos, radius, 3.0f);
             }
         }
     }

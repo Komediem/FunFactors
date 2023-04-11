@@ -5,28 +5,22 @@ using UnityEngine;
 public class FishScript : MonoBehaviour
 {
     public float speed;
-    public float IsExplosed = 0;
 
     [SerializeField]
     private GameObject fireWorksVFX;
 
-
-    void Update()
-    {
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
-        Fireworks();
-    }
+    public float IsExplosed;
 
     private void Start()
     {
         Destroy(gameObject, 8);
     }
 
-    private void Fireworks()
+    void Update()
     {
-        //Debug.Log(IsExplosed);
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
 
-        if(IsExplosed == 2)
+        if (IsExplosed >= 1)
         {
             Instantiate(fireWorksVFX, transform.position, transform.rotation);
             Destroy(gameObject);
