@@ -18,12 +18,13 @@ public class Dynamite : MonoBehaviour
     [SerializeField]
     private GameObject SplashVFX;
 
-
+    private FishScript fishScript;
     private FishCounter fishCounter;
 
     void Start()
     {
         fishCounter = FindObjectOfType<FishCounter>();
+        fishScript = FindObjectOfType<FishScript>();
         StartCoroutine(DynamiteTimer());
     }
 
@@ -67,6 +68,7 @@ public class Dynamite : MonoBehaviour
 
             if (rb != null)
             {
+                fishScript.IsExplosed++;
                 rb.AddExplosionForce(power, ExplosionPos, radius, 3.0f);
                 fishCounter.fishCount++;
             }
