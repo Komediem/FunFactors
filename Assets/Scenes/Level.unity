@@ -1792,7 +1792,7 @@ MonoBehaviour:
   sounds:
   - name: Explosion
     clip: {fileID: 8300000, guid: 497555b05a19dd049849aea02d359984, type: 3}
-    volume: 0.5
+    volume: 0.4
     pitch: 1
     source: {fileID: 0}
   - name: Splash
@@ -1803,6 +1803,11 @@ MonoBehaviour:
   - name: River
     clip: {fileID: 8300000, guid: 97ffbff88ac3c38428d20f10035670ff, type: 3}
     volume: 0.3
+    pitch: 1
+    source: {fileID: 0}
+  - name: Firework
+    clip: {fileID: 8300000, guid: 26f158da482e6f94f9e610673950f58d, type: 3}
+    volume: 0.8
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &1358812769

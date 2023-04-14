@@ -70,8 +70,8 @@ public class Dynamite : MonoBehaviour
 
             if (rb != null)
             {
-                fishScript.IsExplosed++;
                 fishCounter.fishCount++;
+                fishScript.Firework();
                 rb.AddExplosionForce(power, ExplosionPos, radius, 3.0f);
             }
         }

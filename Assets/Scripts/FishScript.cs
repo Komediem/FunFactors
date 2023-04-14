@@ -9,8 +9,6 @@ public class FishScript : MonoBehaviour
     [SerializeField]
     private GameObject fireWorksVFX;
 
-    public float IsExplosed;
-
     private void Start()
     {
         Destroy(gameObject, 8);
@@ -19,10 +17,14 @@ public class FishScript : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.left * speed * Time.deltaTime);
+    }
 
-        if (IsExplosed >= 1)
+    public void Firework()
+    {
+        if (transform.position.y >= 2)
         {
             Instantiate(fireWorksVFX, transform.position, transform.rotation);
+            FindObjectOfType<AudioManager>().Play("Firework");
             Destroy(gameObject);
         }
     }
