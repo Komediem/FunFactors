@@ -8,8 +8,11 @@ public class SpawnZone : MonoBehaviour
     [SerializeField]
     private Vector3 zoneSize;
 
+    private Timer timer;
+
     void Update()
     {
+        timer = FindObjectOfType<Timer>();
         StartCoroutine(Spawn());
     }
 
@@ -21,9 +24,12 @@ public class SpawnZone : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        GameObject instantiated = Instantiate(fish);
-        
-        instantiated.transform.position = new Vector3(Random.Range(transform.position.x - zoneSize.x / 2, transform.position.x + zoneSize.x / 2), Random.Range(transform.position.y - zoneSize.y / 2, transform.position.y + zoneSize.y / 2), 1);
-        yield return new WaitForSeconds(3);
+        if(timer.preTimerIsActive == false)
+        {
+            GameObject instantiated = Instantiate(fish);
+
+            instantiated.transform.position = new Vector3(Random.Range(transform.position.x - zoneSize.x / 2, transform.position.x + zoneSize.x / 2), Random.Range(transform.position.y - zoneSize.y / 2, transform.position.y + zoneSize.y / 2), 1);
+            yield return new WaitForSeconds(3);
+        }
     }
 }
