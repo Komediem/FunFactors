@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 1b8d99ce295933246bca7b9c59f5b150
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Bluefish Demo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d9c3eeb0da812ef4095993a9fe1f0700, type: 3}
+  - {fileID: 12800000, guid: f99dd511a7ae00542b604f3e0c6fb836, type: 3}
+  - {fileID: 12800000, guid: f5960a2d3bf7a1e40bad745d0c9b3a91, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

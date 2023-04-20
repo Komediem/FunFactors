@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e88f40d171548184098f98405e3b1b31
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Bluefish Light Demo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a8f2f698ddd83984f87d668961386b97, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
